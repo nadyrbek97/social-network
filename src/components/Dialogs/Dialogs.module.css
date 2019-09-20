@@ -17,9 +17,7 @@
     text-decoration: none;
 }
 
-.messages {
-    padding: 10px;
-}
 
-.messages .message {
+.message {
+    padding: 20px;
 }
