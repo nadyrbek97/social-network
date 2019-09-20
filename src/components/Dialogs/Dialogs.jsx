@@ -18,39 +18,32 @@ const Message = props => {
 
 const Dialogs = props => {
     let dialogsData = [
-        {
-            id: 1,
-            name: "Nadyr"
-        },
-        {
-            id: 2,
-            name: "Ajara"
-        },
-        {
-            id: 3,
-            name: "Jama"
-        },
-        {
-            id: 4,
-            name: "Edil"
-        }
+        { id: 0, name: "Nadyr" },
+        { id: 1, name: "Ajara" },
+        { id: 2, name: "Jama" },
+        { id: 3, name: "Edil"}
     ];
+
+    let dialogElements = dialogsData.map( (dialog) => <DialogItem id={dialog.id} name={dialog.name}/>);
+
+    let messagesData = [
+        { id: 0, message: "How are you?" },
+        { id: 1, message: "Are you you?" },
+        { id: 2, message: "Did watch match yesterday?" },
+        { id: 3, message: "Yes, sure..."}
+    ];
+
+    let messageElements = messagesData.map( message => <Message text={message.message}/>);
+
 
     return (
         <div className={style.dialogs}>
             <div className={style.dialogItems}>
-                <DialogItem id="1" name="Nadyr" />
-                <DialogItem id="2" name="Ajara" />
-                <DialogItem id="3" name="Jama" />
-                <DialogItem id="4" name="Edil" />
-                <DialogItem id="5" name="Emil" />
-                <DialogItem id="6" name="Davran" />
+                { dialogElements }
             </div>
 
             <div className={style.messages}>
-                <Message text="How are you?" />
-                <Message text="What did you do today?" />
-                <Message text="Did you watch Champions League?" />
+                { messageElements }
             </div>
         </div>
     );
