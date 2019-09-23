@@ -15,11 +15,11 @@ function App(props) {
       <div className="app-wrapper container">
         <Header />
         <Navbar />
-        <Route path="/news" component={<News/>} />
-        <Route path="/music" component={<Music/>} />
+        <Route path="/news" component={News} />
+        <Route path="/music" component={Music} />
         <div className="app-wrapper-content">
-          <Route path="/dialogs" render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />}/>
-          <Route path="/profile" render={ () => <Profile posts={props.posts}/> } />
+          <Route path="/dialogs" render={ () => <Dialogs state={props.appState.dialogPage} />}/>
+          <Route path="/profile" render={ () => <Profile state={props.appState.profilePage}/> } />
         </div>
         
       </div>
