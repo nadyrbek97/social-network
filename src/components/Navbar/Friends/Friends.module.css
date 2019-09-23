@@ -1,0 +1,31 @@
+.friend {
+    display: grid;
+    grid-template-areas:
+    "fH"
+    "f";
+
+    grid-template-rows: 0.5fr 2fr;
+
+}
+
+.friendsHead{
+    grid-area: fH;
+}
+
+.friends{
+    grid-area: f;
+}
+
+.friends ul{
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.friends li{
+    list-style: none;
+}
+
+.friends img{
+    width: 40px;
+    border-radius: 50%;
+}
