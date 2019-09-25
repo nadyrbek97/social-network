@@ -28,9 +28,27 @@ let state = {
 
     dialogPage: {
         dialogs: dialogsData,
-        messages: messagesData
+        messages: messagesData,
+        newMessageText: "write your message here"
     }
 
+};
+
+export let addMessage = () => {
+    let text = state.dialogPage.newMessageText;
+
+    let newMessageData = {
+        id: 9,
+        message: text
+    };
+
+    messagesData.push(newMessageData);
+    state.dialogPage.newMessageText = '';
+    rerenderEntireTree(state);
+};
+
+export let updateNewMessageText = (newMessage) => {
+    state.dialogPage.newMessageText = newMessage;
 };
 
 export let updateNewPostText = (newText) => {
