@@ -6,7 +6,6 @@ import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../red
 
 const MyPosts = (props) => {
 
-    debugger;
     let postElements = props.posts.map( post => <Post message={post.message} likesCount={post.likesCount} />);
 
     // we are getting info from textarea using React Ref
