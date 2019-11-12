@@ -13,7 +13,6 @@ const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT';
 let store = {
 
     _state: {
-
         profilePage: {
             posts: [
                 { id: 0, message: "Post 1", likesCount: 154 },
@@ -22,7 +21,6 @@ let store = {
             ],
             newPostText: "nadyrbek.com"
         },
-
         dialogPage: {
             dialogs: [
                 { id: 0, name: "Nadyr" },
